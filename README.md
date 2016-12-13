@@ -92,3 +92,247 @@ dismathportfolio-JustinHizon created by Classroom for GitHub
 - 2.Direct proof
    - a. Assume P(k) to be true
    - b. Show that P(k+1) is also true
+   ## WEEK 6:
+* **SUMMATION**
+    - The notation for sum of _a<sub>m</sub>, a<sub>m+1</sub>, ..., a<sub>n</sub>_ is _∑<sup>a</sup><sub>i=m </sub>a<sub>i</sub>_ where _i_ is the index of summation.
+
+* **RECURSIVE/INDUCTIVE DEFINITION**
+    - Basis step: Specify the value of the function at zero
+    - Recursive step: Give a rule for finding its value at an integer from its values at smaller integers
+
+* **RECURSIVE ALGORITHMS**
+    - It solves a problem by reducing it to an instance of the same problem with smaller input.
+        - Recall: <u>Algorithm</u> - finite set of precise instructions for performing a computation/solving a problem.
+
+* **PROGRAM CORRECTNESS**
+    - We need a proof to show that the program always gives the correct output.
+        - PROGRAM VERIFICATION
+            - Proof of correctness of programs
+            - Uses the rules of inference and various proof techniques including mathematical induction
+            - It is said to be correct if it produces the correct output for every possible input:
+                1. Show that the correct answer is obtained if the program terminates (Partial Correctness)
+                2. Show that the program always terminates
+        - PARTIAL CORRECTNESS
+            - Two propositions are used to specify what it means for a program to produce the correct output:
+                1. Initial Assertion - _p_ - gives the properties that the input values must have
+                2. Final Assertion - _q_ - gives the properties that the output of the program should have, if the program did what it was told
+
+* **HOARE TRIPLE**
+    - p{s}q
+    - A program, _S_, is said to be partially correct with respect to the initial assertion _p_ and the final assertion _q_ if whenever _p_ is true for the input values of _S_ and _S_ terminates, then _q_ is true for the output values of _S_.
+
+* **RULES OF INFERENCE**
+    - CONDITIONAL STATEMENTS </br>
+        (p ∧ _condition_) {S} q </br>
+        (p ∧ _¬condition_) → q </br>
+        ∴ p {**if** _condition_ **then** _S_} q
+
+    - IF-ELSE STATEMENT </br>
+        (p ∧ _condition_) {S<sub>1</sub>} q </br>
+        (p ∧ _¬condition_) {S<sub>2</sub>} q </br>
+        ∴ p {*if* _condition_ *then* _S<sub>1</sub>_ *else* _S<sub>2</sub>_} q
+
+* **POWER SERIES**
+    - ∑<sup>∞</sup><sub>n = 0</sub> a<sub>n</sub>x<sup>n</sup> </br>
+        where _a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub>, ..._ is a given sequence of constants, and _x_ is a real variable.
+
+-Then we did our quiz on friday which is really hard
+
+## WEEK 7:
+
+-I received the score of my quiz and found out I had a really low score so I should work hard for the next one
+-The lessons that were discussed this week
+* **Set theories**
+    -{  ,  ,  ,  }
+     ex. {0,2,4,6...}
+    -Where Ø is an empty set {}
+    -{Ø} is a set with an empty set and is not the same as Ø
+    -Union is all the elements in 2 sets
+    -Intersection is the common elements in the 2 sets
+    -Complement is the elements not in a set
+    -Symmetric difference is elements which are not common within the 2 sets
+
+* **SET IDENTITIES TABLE**
+
+|  **LAW**  |  **IDENTITY**  |
+| :------: | :-----------------------------: |
+|  Identity Laws  |  A ⋂ U ≡ A  <br>  A ⋃ ∅ ≡ A  |
+|  Domination Laws  |  A ⋃ U ≡ U  <br>  A ⋂ ∅ ≡ ∅  |
+|  Idempotent Laws  |  A ⋃ A ≡ A  <br>  A ⋂ A ≡ A  |
+|  Complementation Law  |  (A¯)‾ ≡ A  |
+|  Commutative Laws  |  A ⋃ B ≡ B ⋃ A  <br>  A ⋂ B ≡ B ⋂ A  |
+|  Associative Laws  |  A ⋃ (B ⋃ C) ≡ (A ⋃ B) ⋃ C  <br>  A ⋂ (B ⋂ C) ≡ (A ⋂ B) ⋂ C  |
+|  Distributive Laws  |  A ⋃ (B ⋂ C) ≡ (A ⋃ B) ⋂ (A ⋃ C) <br>  A ⋂ (B ⋃ C) ≡ (A ⋂ B) ⋃ (A ⋂ C)  |
+|  De Morgan's Laws  |  (A ⋂ B)‾ ≡ A‾ ⋃ B‾  <br>  (A ⋃ B)‾ ≡ A‾ ⋂ B‾  |
+|  Absorption Laws  |  A ⋃ (A ⋂ B) ≡ A  <br>  A ⋂ (A ⋃ B) ≡ A  |
+|  Complement Laws  |  A ⋃ A‾ ≡ U  <br>  A ⋂ A‾ ≡ ∅  |
+
+* **SUBSETS ⊆**
+   -is a set that can be made from another set where they have the same elements
+* **POWER SET P( )**
+   -is a set of all possible subsets
+* **CARDINALITY | |**
+   -is the number of elements a set contains
+   -duplicates of a element in a set is not counted
+   -If the cardinaly is too high or infinite ex. cardinality of all natural numbes |ℕ| we use aleph-naught ![Image](https://upload.wikimedia.org/math/b/e/4/be4c703ed73456618ed283b892c6715a.png)
+
+* **FUNCTIONS**
+  - Let A and B be sets. A function f from A to B is an assignment of exactly one element of B to each element of A.
+  -  Functions are also called MAPPINGS or TRANSFORMATIONS.
+    - f: A to B </br>
+       A: domain </br>
+       B: co-domain
+    - Range - actually occuring values
+    - IMAGE
+      - If _f(a) = b_, _b- is the image of _A_.
+      - The range of _f_ is the set of all images of elements of _a_.
+
+* **TYPES OF FUNCTIONS**
+    - One - to - one Function (Injection)
+      - like the name implies only one element of x can be assigned to y and vise versa
+    - Onto Function (Surjective)
+      - functions have equal range & co-domain.
+    - One - to - one Correspondence (Bijection)
+     - function is both one - to - one and onto.
+
+## WEEK 8:
+
+-We learned about algorithms one of the most confusing lessons in Dismath
+* **Properties**
+      - INPUT - has input values from a specified set 
+      - OUTPUT - solution to the problem 
+      - DEFINITENESS - defined precisely 
+      - CORRECTNESS - produce the correct output values 
+      - FINITENESS - produce the desired output 
+      - EFFECTIVENESS - perform exactly and in a finite amount of time 
+      - GENERALITY - applicable for all problems of the desired form
+* **PSEUDOCODE**
+   -its like coding what we did in LBYEC71 on paper that can be understood by humans
+   -it has preconditions and postconditions
+
+## WEEK 9:
+
+-We were thought about different algorithms which are Searching, Sorting, and Greedy Algorithms
+*Searching Algorithm*
+  -Used for finding an elemenent in a ordered list
+  -There are 2 types that we learned
+    -Linear Search- Finding the element one by one throughout the list
+    -Binary Search- Comparing middle values of the list until the element is found
+*Sorting Algorithm*
+  - used for assorting elements in increasing order
+    - Bubble Sort - compares the first two elements then interchanging them if they are in the incorrect order.
+    - Insertion Sort - compares the second element with the first and inserts it before the first element if it is less. Otherwise, it is inserted after the first element.
+*Greedy Algorithm*
+  - -an algorithm that starts with the "best" choice at each step to lead to an optimal solution.
+
+## WEEK 10:
+
+-We learned about growth of functions
+- Big-O Notation
+    - Let f and g be functions from R-R; _f(x)_ is _O(g(x))_ if there are constants C and k such that:
+        |f(x)| ≤ C|g(x)| 
+    whenever x > k.
+
+- Big-Omega and Big-Theta Notation
+    - Big-O Notation does not provide a lowerbound for the size of f(x). 
+        - Big-Omega (Big-Ω) - lower bound
+        - Big-Theta (Big-Θ) - both upper and lower bound
+
+- Algorithm Time Complexity - can be expressed in terms of the number of operations used by the algorithm when the input has a particular size.
+
+- Division and Modulo Operator
+  - let a be an integer and d positive integer. Then there is a unique Q and r with 0 ≤ r < d such that a = dQ + r
+  - Q = a div d
+  - r = a mod d
+
+-We did our second quiz on friday
+
+## Week 11:
+
+-No classes due to Holy week
+
+## Week 12:
+
+-We learned about graph theory G = (V, E)
+- **Hand shaking theory** 
+  - 2e = ∑deg(v)
+- **Paths and Cicuits**
+  -Euler Circuit - a circuit where you can pass all edges and return to the starting point (Has an even degree of edges in each vertex)
+  -Euler Path - a path where you can pass all edges but will not end in the starting point (Has exactly 2 nodes with an odd degree where either is the starting point and the other must be the endpoint
+  -Hamilton Circuit - a circuit where you can pass all nodes and return to the starting point
+  -Hamilton Path - a path where you can pass all nodes but not being able to return to the starting point
+
+- **Matrices of Graphs** 
+  - 1 for adjacent; 0 for non-adjacent
+- **Incidence of Matrices** 
+  - a matrix between the vertices and the edges.
+
+- **Isomorphism of Graphs** 
+  - a simple graph is isomorphic if it has a one-to-one and onto function.
+  - i.e. vertices change positions and still have the same connection as before.
+
+- **Planar Graph**
+  - Graphs that can be drawn in the plane without edges having to cross.
+  - Euler's Formula: r = e - v + 2
+    - r - regions
+    - e - edges
+    - v - vertices
+  - Euler's Characteristic: ℵ = r - |e| + |v| where ℵ = 2
+
+- **Homeomorphic Graphs**
+  - Graphs are called homeomorphic if they can be obtained from the same graph by a sequence of elementary subdivisions.
+  - *Elementary Subdivision* - If a graph is planar, so will be any graph obtained by removing an edge and adding a new vertex together with edges.
+  - *Kuratowski's Theorem* - a graph is nonplanar if and only if it contains a subgraph homeophobic to K3,3 and K5.
+
+## Week 13:
+- **Graph Coloring** - assignment of a color to each vertex of the graph so that no two adjacent vertices are assigned the same color.
+  - *Four Color Theorem* - the chromatic number of a planar graph is no greater than four.
+
+- **Trees**
+  - A connected undirected graph with no simple circuits.
+  - A data structure that emulates a heirarchical tree structure with a set of linked nodes.
+  - Used to construct efficient algorithms for locating an item in a list.
+  - Multiple *Trees* are called **Forest**.
+  - *Rooted Tree* - a tree in which one vertex has been designated as the root and every edge is directed away from the root.
+    - Root - the beginning of a tree
+    - Internal vertices - every vertex before the leaves
+    - Leaves - vertices with no descendants
+  - *M-ary tree*
+    - A rooted tree is called an m-ary tree if every internal vertex has no more than m children.
+    - An m-ary tree with m = 2 is called a *binary tree*
+
+- **Modeling Computations**
+  - *Language and Grammars*
+    - Grammars - used to generate the words of a language and to determine whether a word is in a language
+    - Compiler - reads a program written in a source language and translate it into an equivalent program in a target language.
+      - Formal Language - automatic translation of one language to another
+        - well defined set of rules
+
+- **Alphabet & String**
+    - common way to talk about words, numbers, etc.
+
+- **Automata Theory**
+    - Studies the law of computation
+    - Finite Automata - simplest model of automata
+      - initial state
+      - final state
+      - dead/stuck state
+      - transition state
+
+- **Lexical Analysis**
+    - process where the stream of characters making up the source program into a sequence of "words" that make up the source code.
+
+- **Finite State Machine**
+  - S: Finite set of states
+  - I: Finite input alphabet
+  - O: Finite output alphabet
+  - f: Transition function
+  - g: Output function
+  - s<sub>0</sub>: Initial state
+
+- **Turing Machine**
+    - Alan Turing, the father of computer science.
+    - "Imitation Game" movie based on his life.
+
+## Week 14:
+-Finals week
